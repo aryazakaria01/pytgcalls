@@ -27,7 +27,7 @@
 </p>
 
 
-# PyTgCalls 
+# PyTgCalls
 
 [![pre-commit.ci status][pre-commit.ci-badge]][pre-commit.ci]
 [![PyPI](https://img.shields.io/pypi/v/py-tgcalls.svg?style=flat)](https://pypi.org/project/py-tgcalls/)

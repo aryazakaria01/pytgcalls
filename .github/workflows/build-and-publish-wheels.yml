@@ -3,7 +3,7 @@
 name: Build Wheels
 on:
   push:
-    branches: [ master ]
+    branches: [ master, dev ]
   workflow_dispatch:
 
 jobs:
@@ -128,10 +128,10 @@ jobs:
         run: |
           md dist
           Get-ChildItem -Path .\tmp -Recurse -File | Move-Item -Destination .\dist
-      - name: Push to PyPi
+      - name: Push to PyPi ${{ github.ref }}
         env:
           TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         run: |
+          echo "${{ github.ref }} ${{ github.workspace }}"
           python -m twine check dist/*
-          python -m twine upload dist/*
