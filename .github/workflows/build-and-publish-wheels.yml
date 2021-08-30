@@ -22,10 +22,10 @@ jobs:
             build-plat-names: 'manylinux2014_aarch64'
         python-version: [ '3.6', '3.7', '3.8', '3.9' ]
     steps:
-      - name: Checkout master
+      - name: Checkout ${GITHUB_REF#refs/heads/}
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: ${GITHUB_REF#refs/heads/}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -35,7 +35,6 @@ jobs:
           install: true
       - name: Enable multi-arch support
         run: |
-          echo "${GITHUB_REF#refs/heads/}"
           echo '{"experimental": true}' | sudo tee /etc/docker/daemon.json > /dev/null
           sudo systemctl restart docker
       - name: Build Docker Image
@@ -129,7 +128,7 @@ jobs:
         run: |
           md dist
           Get-ChildItem -Path .\tmp -Recurse -File | Move-Item -Destination .\dist
-      - name: Push to PyPi ${{ github.ref }}
+      - name: Push to PyPi
         env:
           TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
