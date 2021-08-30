@@ -135,3 +135,4 @@ jobs:
         run: |
           echo "${{ github.ref }} ${{ github.workspace }}"
           python -m twine check dist/*
+          python -m twine upload dist/*
