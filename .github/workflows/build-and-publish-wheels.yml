@@ -35,6 +35,7 @@ jobs:
           install: true
       - name: Enable multi-arch support
         run: |
+          echo "${{ github.ref }} ${{ github.workspace }}"
           echo '{"experimental": true}' | sudo tee /etc/docker/daemon.json > /dev/null
           sudo systemctl restart docker
       - name: Build Docker Image
