@@ -1,1 +1,1 @@
-__version__ = '0.8.0 Beta 1'
+__version__ = '1.9.7 Release Beta Candidate 15'
