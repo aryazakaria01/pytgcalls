@@ -16,7 +16,7 @@ class PyTgCallsSession:
             PyTgCallsSession.notice_displayed = True
             print(
                 f'PyTgCalls v{__version__}, Copyright (C) '
-                f'2021 Laky-64 <https://github.com/Laky-64>\n'
+                f'2021 aryazakaria01 <https://github.com/aryazakaria01>\n'
                 'Licensed under the terms of the GNU Lesser '
                 'General Public License v3 or later (LGPLv3+)\n',
             )
