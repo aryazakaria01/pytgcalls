@@ -3,8 +3,8 @@ from typing import Optional
 
 
 class Scaffold:
-    _REQUIRED_NODEJS_VERSION = '15.0.0'
-    _REQUIRED_PYROGRAM_VERSION = '1.2.0'
+    _REQUIRED_NODEJS_VERSION = '17.0.0'
+    _REQUIRED_PYROGRAM_VERSION = '1.2.9'
     _REQUIRED_TELETHON_VERSION = '1.23.0'
 
     def __init__(self):
