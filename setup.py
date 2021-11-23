@@ -125,7 +125,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/pytgcalls/pytgcalls',
     author='aryazakaria01',
-    author_email='ardianrazak7107@gmail.com',
+    author_email='iraci.matteo@gmail.com',
     license='LGPL-3.0',
     license_file='LICENSE',
     classifiers=[
@@ -137,7 +137,6 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
